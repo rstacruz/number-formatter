@@ -43,7 +43,7 @@
     "currency"
   ],
   "files": [
-    "src/format.js"
+    "lib/format.js"
   ],
   "scripts": {
     "test": "grunt test"

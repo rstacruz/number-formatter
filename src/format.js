@@ -1,4 +1,3 @@
-/*jshint browser:true */
 /* global define, module */
 (function ( root, factory ) {
 	if ( typeof define === 'function' && define.amd ) {

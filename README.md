@@ -2,15 +2,15 @@
 
 Lightweight & Fast JavaScript Number Formatter
 
-[![Build Status](https://travis-ci.org/Mottie/javascript-number-formatter.png?branch=master)](https://travis-ci.org/Mottie/javascript-number-formatter)
+[![Build Status](https://travis-ci.org/j-/number-formatter.png?branch=master)](https://travis-ci.org/j-/number-formatter)
 
 ## Introduction
 
 This standalone number formatter is intended to be short and fast. As they are the main factors for a high performance JavaScript app. Development release is as short as < 120 lines including license info, blank lines and comments. And production release is less than 1,200 bytes.
 
 ```js
-format( "#,##0.####", 1234567.890 );  // output: "1,234,567.89"
-format( "$ #,###.00", -1234567.890 ); // output: "$ -1,234,567.89"
+numberFormatter( "#,##0.####", 1234567.890 );  // output: "1,234,567.89"
+numberFormatter( "$ #,###.00", -1234567.890 ); // output: "$ -1,234,567.89"
 ```
 
 ## Features
@@ -21,7 +21,7 @@ format( "$ #,###.00", -1234567.890 ); // output: "$ -1,234,567.89"
 * Accept any numbers of digit grouping. `#,##,#0.000` or `#,###0.##` are all valid.
 * Accept any redundant/fool-proof formatting. `##,###,##.#` or `0#,#00#.###0#` are all OK.
 * Auto number rounding.
-* Simple interface, just supply mask & value like this: `format( "0.0000", 3.141592)`.
+* Simple interface, just supply mask & value like this: `numberFormatter( "0.0000", 3.141592)`.
 * Include a prefix &amp; suffix with the mask
 
 ## Limitations
@@ -29,22 +29,26 @@ format( "$ #,###.00", -1234567.890 ); // output: "$ -1,234,567.89"
 * No scientific/engineering formatting.
 * Not for date or phone formation.
 * No color control.
-* <del>No prefix or suffix is allowed except leading negation symbol. So `$#,##0.00` or `#,###.##USD` will not yield expected outcome. Use `'$'+format('#,##0.00', 123.45)` or `format('#,##0.00', 456.789) + 'USD'`</del>
+* <del>No prefix or suffix is allowed except leading negation symbol. So `$#,##0.00` or `#,###.##USD` will not yield expected outcome. Use `'$'+numberFormatter('#,##0.00', 123.45)` or `numberFormatter('#,##0.00', 456.789) + 'USD'`</del>
 * The prefix or suffix can not include any numbers (`0-9`), dashes (`-`), or plus signs (`+`).
 
 ## Installation
 
-### npm package
+### npm
 
-    npm install --save number-format.js
+```sh
+$ npm install --save number-formatter
+```
 
 ### bower
 
-    bower install number-format.js --save
+```sh
+$ bower install --save number-formatter
+```
 
 ## Note
 
-When there's only one symbol is supplied, system will always treat the single symbol as Decimal. For instance, `format( '#,###', 1234567.890)` will output `1234567,890`. To force a single symbol as Separator, add a trailing dot to the end like this: `format( '#,###.', 1234567.890)` which will then output `1,234,567`.
+When there's only one symbol is supplied, system will always treat the single symbol as Decimal. For instance, `numberFormatter( '#,###', 1234567.890)` will output `1234567,890`. To force a single symbol as Separator, add a trailing dot to the end like this: `numberFormatter( '#,###.', 1234567.890)` which will then output `1,234,567`.
 
 A demo/sample page with few examples is provided ([DEMO](http://mottie.github.io/javascript-number-formatter/)). The code is safe to be minimized using Google Compiler in Advanced mode.
 

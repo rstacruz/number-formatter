@@ -2,11 +2,11 @@
 /* global define, module */
 (function ( root, factory ) {
 	if ( typeof define === 'function' && define.amd ) {
-		define( [], factory );
+		define( 'number-formatter', [], factory );
 	} else if ( typeof module === 'object' ) {
 		module.exports = factory();
 	} else {
-		root.format = factory();
+		root.numberFormatter = factory();
 	}
 }( this, function () {
 

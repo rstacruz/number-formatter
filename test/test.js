@@ -1,5 +1,5 @@
 /*global window, test, expect, strictEqual */
-var format = window.format;
+var format = window.numberFormatter;
 /* Simple mask */
 test('basic masks', function() {
 

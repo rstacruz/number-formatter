@@ -1,7 +1,9 @@
 /* global define, module */
 (function ( root, factory ) {
 	if ( typeof define === 'function' ) {
-		define( 'number-formatter', [], factory );
+		define( 'number-formatter', ['exports'], function (exports) {
+			return (exports['default'] = factory());
+		});
 	} else if ( typeof module === 'object' ) {
 		module.exports = factory();
 	} else {

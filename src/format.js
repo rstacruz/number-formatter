@@ -1,6 +1,6 @@
 /* global define, module */
 (function ( root, factory ) {
-	if ( typeof define === 'function' && define.amd ) {
+	if ( typeof define === 'function' ) {
 		define( 'number-formatter', [], factory );
 	} else if ( typeof module === 'object' ) {
 		module.exports = factory();

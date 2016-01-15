@@ -1,3 +1,4 @@
+:)
 # Javascript Number Formatter
 
 Lightweight & Fast JavaScript Number Formatter

@@ -1,3 +1,8 @@
+> # Deprecated
+> Use the upstream [Mottie/javascript-number-formatter](https://github.com/Mottie/javascript-number-formatter) instead. Use:
+>
+>     npm install number-format.js
+
 # Javascript Number Formatter
 
 Lightweight & Fast JavaScript Number Formatter
